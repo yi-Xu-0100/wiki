@@ -13,7 +13,12 @@ destination: output
 themes_dir: themes
 theme: simple2
 
-default_ext: "markdown"
+default_ext: md
 pygments: true
 debug: false
 index: true
+
+deploy:
+  - type: git
+    remote: <remote repo name, default is 'origin'>
+    branch: <branch, default is 'gh-pages'>
