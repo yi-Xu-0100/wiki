@@ -7,7 +7,7 @@ keywords: wiki
 description: Personal wiki.
 author: yi_Xu
 
-root: /
+root: /wiki
 source: content
 destination: output
 themes_dir: themes
