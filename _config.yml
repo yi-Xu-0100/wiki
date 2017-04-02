@@ -15,8 +15,7 @@ theme: simple2
 
 default_ext: md
 pygments: true
-debug: false
-index: true
+debug: true
 
 deploy:
   - type: git
