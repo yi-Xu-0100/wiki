@@ -161,6 +161,8 @@ pre code {
     width: 60em;
     color: #555;
     line-height: 1em;
+    padding-top: 0;
+    padding-bottom: 2em;
 }
 
 #footer p {
