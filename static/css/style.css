@@ -158,6 +158,7 @@ pre code {
     margin: 10px auto;
     font-size: 80%;
     /*text-align: center;*/
+    width: 50em;
     color: #555;
     line-height: 1em;
 }
