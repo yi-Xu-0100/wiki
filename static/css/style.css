@@ -172,11 +172,13 @@ pre code {
 
 #footer .footer-left {
   float: left;
+  margin: 0;
   max-width: 70%;
 }
 
 #footer .footer-right {
   float: right;
+  margin: 0;
   text-align: right;
   max-width: 30%;
 }
