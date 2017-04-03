@@ -1,4 +1,4 @@
-/*  
+/*
 Theme Name: Simple2
 Author: Tanky Woo<me@tankywoo.com>
 Author URI: http://www.wutianqi.com/
@@ -90,7 +90,7 @@ td {
 }
 
 /* Optimization for pre and code tag */
-pre, code { 
+pre, code {
     font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", Monaco, Andale Mono, "MS Gothic", monospace;
     font-size: 13px;
     border-radius: 3px;
@@ -106,7 +106,7 @@ code {
     padding: 1px 3px;
 }
 
-pre { 
+pre {
     border: 1px solid #eee;
     padding: 8px 12px;
     white-space: pre;
@@ -158,7 +158,7 @@ pre code {
 #footer p {
     margin: 10px auto;
     font-size: 80%;
-    text-align: center;
+    text-align: left;
     color: #555;
     line-height: 1em;
 }
