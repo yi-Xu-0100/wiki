@@ -154,17 +154,31 @@ pre code {
 .page_title {
     border-bottom: 1px dashed #eee;
 }
-
-#footer p {
+#footer {
     margin: 10px auto;
     font-size: 80%;
-    text-align: left;
+    /*text-align: center;*/
     color: #555;
     line-height: 1em;
 }
 
+#footer p {
+    margin: 0;
+}
+
 #footer a { color: #555; }
 #footer a:hover { color: black; }
+
+#footer .footer-left {
+  float: left;
+  max-width: 70%;
+}
+
+#footer .footer-right {
+  float: right;
+  text-align: right;
+  max-width: 30%;
+}
 
 .post-nav a { color: #555; }
 .post-nav a:hover { color: black; }
