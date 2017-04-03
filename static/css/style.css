@@ -155,7 +155,7 @@ pre code {
     border-bottom: 1px dashed #eee;
 }
 #footer {
-    margin: 10px auto;
+    margin: 10px auto 1em auto;
     font-size: 80%;
     /*text-align: center;*/
     width: 60em;
