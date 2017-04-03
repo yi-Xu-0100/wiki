@@ -1,4 +1,4 @@
-/*  
+/*
 Theme Name: Simple2
 Author: Tanky Woo<me@tankywoo.com>
 Author URI: http://www.wutianqi.com/
@@ -90,7 +90,7 @@ td {
 }
 
 /* Optimization for pre and code tag */
-pre, code { 
+pre, code {
     font-family: Consolas, "DejaVu Sans Mono", "Lucida Console", Monaco, Andale Mono, "MS Gothic", monospace;
     font-size: 13px;
     border-radius: 3px;
@@ -106,7 +106,7 @@ code {
     padding: 1px 3px;
 }
 
-pre { 
+pre {
     border: 1px solid #eee;
     padding: 8px 12px;
     white-space: pre;
@@ -129,7 +129,7 @@ pre code {
     background: white;
     width: 50em;
     line-height: 1.5em;
-    margin: 1.5em auto 3em auto;
+    margin: 1.5em auto 1.5em auto;
     padding: 1.5em 2em;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 8px #aaa;
@@ -154,17 +154,36 @@ pre code {
 .page_title {
     border-bottom: 1px dashed #eee;
 }
-
-#footer p {
-    margin: 10px auto;
+#footer {
+    margin: 10px auto 1em auto;
     font-size: 80%;
-    text-align: center;
+    /*text-align: center;*/
+    width: 60em;
     color: #555;
     line-height: 1em;
+    padding-top: 0;
+    padding-bottom: 2em;
+}
+
+#footer p {
+    margin: 0;
 }
 
 #footer a { color: #555; }
 #footer a:hover { color: black; }
+
+#footer .footer-left {
+  float: left;
+  margin: 0;
+  max-width: 70%;
+}
+
+#footer .footer-right {
+  float: right;
+  margin: 0;
+  text-align: right;
+  max-width: 30%;
+}
 
 .post-nav a { color: #555; }
 .post-nav a:hover { color: black; }
