@@ -1,7 +1,7 @@
 ---
-title: "Getting Started"
+title: "Getting Started For Simiki"
 layout: page
-date: 2099-06-02 00:00
+date: 2017-04-02
 ---
 
 [TOC]
