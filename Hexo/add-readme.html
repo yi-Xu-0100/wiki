@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="Stylesheet" type="text/css" href="/static/css/tango.css">
+    <link rel="shortcut icon" href="http://oneqpwfpv.bkt.clouddn.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://oneqpwfpv.bkt.clouddn.com/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+    <title>Add README.md for Hexo - Wiki · yi_Xu</title>
+    <meta name="keywords" content="wiki;"/>
+    <meta name="description" content="Personal wiki."/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+    <div id="container">
+      
+<div id="header">
+  <div class="post-nav"><a href="/">Home</a>&nbsp;&#187;&nbsp;<a href="/#Hexo">Hexo</a>&nbsp;&#187;&nbsp;Add README.md for Hexo
+    <span class="updated">Updated&nbsp;
+      2017-04-28 18:20:12
+    </span></div>
+</div>
+<div class="clearfix"></div>
+
+<div class="page_title">Add README.md for Hexo</div>
+
+  <p><code>Github</code>上一个项目总是会有个<code>README.md</code>的介绍文档，但是<code>Hexo</code>在部署文章时会渲染<code>*.md</code>文件，我的解决方案如下：</p>
+<p>在<code>\source</code>目录下添加<code>README.md</code>文件。</p>
+<p>在全局<code>config.yml</code>文件中找到<code>skip_render</code>,修改为：</p>
+<div class="hlcode"><pre><span class="n">skip_render</span><span class="o">:</span> <span class="n">README</span><span class="o">.</span><span class="na">md</span>
+</pre></div>
+
+
+<p>然后在<code>GitBash</code>中重新部署。</p>
+<div class="hlcode"><pre>hexo clean
+hexo generate
+hexo deploy
+</pre></div>
+
+
+<p>然后在目录中可以看到<code>README.md</code>文件成功添加上。</p>
+<p><img alt="GithubBlogContents" src="http://oneqpwfpv.bkt.clouddn.com/blogcontent.jpg" /></p>
+    </div>
+    <div id="footer">
+      <div class="footer-left">
+        <p>
+          Copyright © 2017 <a href="https://www.yixuju.cn/" target="_blank">yi_Xu</a>.
+          Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+        </p>
+      </div>  <!--end footer-left -->
+      <div class="footer-right">
+        <p>
+          Site Generated 2017-04-28 18:23:48
+        </p>
+      </div> <!--end footer-right -->
+    </div>
+  </body>
+</html>
