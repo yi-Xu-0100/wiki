@@ -1,5 +1,5 @@
 ---
-title: "Getting Started For Simiki"
+title: "Getting started for Simiki"
 layout: page
 date: 2017-04-02
 ---

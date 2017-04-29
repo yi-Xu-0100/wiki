@@ -1,5 +1,5 @@
 ---
-title: "Getting Started For Hexo"
+title: "Getting started for Hexo"
 layout: page
 date: 2017-03-21
 ---
