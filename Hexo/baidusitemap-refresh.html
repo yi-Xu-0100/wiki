@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="Stylesheet" type="text/css" href="/static/css/tango.css">
+    <link rel="shortcut icon" href="http://oneqpwfpv.bkt.clouddn.com/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="http://oneqpwfpv.bkt.clouddn.com/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+    <title>Refresh baidusitemap - Wiki · yi_Xu</title>
+    <meta name="keywords" content="wiki;"/>
+    <meta name="description" content="Personal wiki."/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+    <div id="container">
+      
+<div id="header">
+  <div class="post-nav"><a href="/">Home</a>&nbsp;&#187;&nbsp;<a href="/#Hexo">Hexo</a>&nbsp;&#187;&nbsp;Refresh baidusitemap
+    <span class="updated">Updated&nbsp;
+      2017-04-29 11:55:08
+    </span></div>
+</div>
+<div class="clearfix"></div>
+
+<div class="page_title">Refresh baidusitemap</div>
+
+  <p>个人<code>Blog</code>收录百度之路尤为崎岖。为了在百度站长平台提交<code>sitemap</code>，实验了许久。</p>
+<p>按照正常的主题内容指导，我配置了相关的内容，安装了<code>hexo-generator-baidu-sitemap</code>。</p>
+<p>但由于<code>Blog</code>从<code>Github</code>搬运到了<code>coding</code>上，<code>baidusitemap</code>的提交一直显示连接不上。</p>
+<p>我从网上找了各种方法，但对于我的情况并没有任何改善。终于让我发现了可疑之处。</p>
+<p>我发现在我生成的<code>baidusitemap.xml</code>中有如下显示：</p>
+<div class="hlcode"><pre>-<span class="nt">&lt;url&gt;</span>
+    <span class="nt">&lt;loc&gt;</span>https://yi-xu-0100.github.io/2017-03-21/hello-world/<span class="nt">&lt;/loc&gt;</span>
+    <span class="nt">&lt;lastmod&gt;</span>2017-04-13T10:00:50.598Z<span class="nt">&lt;/lastmod&gt;</span>
+    -<span class="nt">&lt;data&gt;</span>
+        -<span class="nt">&lt;display&gt;</span>
+            <span class="nt">&lt;title&gt;</span>Hello World<span class="nt">&lt;/title&gt;</span>
+            <span class="nt">&lt;pubTime&gt;</span>2017-03-21T01:17:43.000Z<span class="nt">&lt;/pubTime&gt;</span>
+            <span class="nt">&lt;tag&gt;</span>hexo<span class="nt">&lt;/tag&gt;</span>
+            <span class="nt">&lt;breadCrumb</span> <span class="na">title=</span><span class="s">&quot;其他分享&quot;</span> <span class="na">url=</span><span class="s">&quot;https://www.yixuju.cn/categories/other/&quot;</span><span class="nt">/&gt;</span>
+        <span class="nt">&lt;/display&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+<span class="nt">&lt;/url&gt;</span>
+</pre></div>
+
+
+<p>在<code>baidusitemap.xml</code>中的标签<code>&lt;loc&gt;</code>中链接地址居然是<code>Github</code>的。要知道这个<code>baidusitemap.xml</code>我就是专门不想它爬<code>Github</code>的，我也是因为这样我才搬到<code>coding</code>上的。</p>
+<p>然后，意外的是，我重新安装<code>hexo-generator-baidu-sitemap</code>，并未有任何变化。</p>
+<p>终于，我找到<code>\node_modules\hexo-generator-baidu-sitemap\baidusitemap.ejs</code>，显示如下：</p>
+<div class="hlcode"><pre><span class="nt">&lt;loc&gt;</span><span class="err">&lt;</span>%- encodeURI(&quot;https://yi-xu-0100.github.io/&quot; + post.path) %&gt;<span class="nt">&lt;/loc&gt;</span>
+</pre></div>
+
+
+<p>好吧，居然定死了，可能是我个人原因，技术不精，难以修复，直接暴力修改如下：</p>
+<div class="hlcode"><pre><span class="nt">&lt;loc&gt;</span><span class="err">&lt;</span>%- encodeURI(&quot;https://www.yixuju.cn/&quot; + post.path) %&gt;<span class="nt">&lt;/loc&gt;</span>
+</pre></div>
+
+
+<p>结果完美解决，记下。</p>
+    </div>
+    <div id="footer">
+      <div class="footer-left">
+        <p>
+          Copyright © 2017 <a href="https://www.yixuju.cn/" target="_blank">yi_Xu</a>.
+          Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+        </p>
+      </div>  <!--end footer-left -->
+      <div class="footer-right">
+        <p>
+          Site Generated 2017-04-29 11:56:30
+        </p>
+      </div> <!--end footer-right -->
+    </div>
+  </body>
+</html>
