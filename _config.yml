@@ -17,6 +17,15 @@ default_ext: md
 pygments: true
 debug: true
 
+category:
+  - name: Theoretical-mechanics  # 目录名
+    label: 理论力学  # 目录的别名, 生成首页时可以使用
+  - name: Particle-mechanics
+    label: 质点力学
+#  - name: database
+#    label: 数据库
+
+
 deploy:
   - type: git
     remote: origin
