@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="Stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="Stylesheet" type="text/css" href="/static/css/tango.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+    <title>质点力学 - Wiki · yi_Xu</title>
+    <meta name="keywords" content="wiki;"/>
+    <meta name="description" content="Personal wiki."/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+
+  <body>
+    <div id="container">
+      
+<div id="header">
+  <div class="post-nav"><a href="/">Home</a>&nbsp;&#187;&nbsp;<a href="/#Theoretical-mechanics">Theoretical-mechanics</a>&nbsp;&#187;&nbsp;质点力学
+    <span class="updated">Updated&nbsp;
+      2017-05-07 12:15:07
+    </span></div>
+</div>
+<div class="clearfix"></div>
+
+<div class="page_title">质点力学</div>
+
+  <div class="toc"><span class="toctitle">Table of Contents</span><ul>
+<li><a href="#_1">质点力学思维导图</a></li>
+<li><a href="#_2">运动的描述方法</a><ul>
+<li><a href="#_3">参考系和坐标系</a></li>
+<li><a href="#_4">运动学方程和轨迹</a></li>
+<li><a href="#_5">位移、速度和加速度</a></li>
+</ul>
+</li>
+<li><a href="#_6">速度、加速度的分量表示式</a><ul>
+<li><a href="#_7">直角坐标系</a></li>
+<li><a href="#_8">极坐标系</a></li>
+<li><a href="#_9">切向加速度和法向加速度</a></li>
+</ul>
+</li>
+<li><a href="#_10">平动参考系</a><ul>
+<li><a href="#_11">绝对加速度、相对加速度和牵连加速度</a></li>
+<li><a href="#_12">绝对速度、相对速度和牵连速度</a></li>
+</ul>
+</li>
+<li><a href="#_13">质点运动定律</a><ul>
+<li><a href="#_14">牛顿运动定律</a></li>
+<li><a href="#_15">相对性原理</a></li>
+</ul>
+</li>
+<li><a href="#_16">质点运动微分方程</a><ul>
+<li><a href="#_17">运动微分方程的建立</a></li>
+<li><a href="#_18">运动微分方程的解</a></li>
+</ul>
+</li>
+<li><a href="#_19">非惯性系动力学</a><ul>
+<li><a href="#_20">在加速平动参考系中的运动</a></li>
+<li><a href="#_21">惯性力</a></li>
+</ul>
+</li>
+<li><a href="#_22">功和能</a><ul>
+<li><a href="#_23">功和功率</a></li>
+<li><a href="#_24">能</a></li>
+<li><a href="#_25">保守力、非保守力和耗散力</a></li>
+<li><a href="#_26">势能</a></li>
+</ul>
+</li>
+<li><a href="#_27">质点动力学的基本定理与基本守恒定律</a><ul>
+<li><a href="#_28">动量定理与动量守恒定律</a></li>
+<li><a href="#_29">力矩与动量矩</a></li>
+<li><a href="#_30">动量矩（角动量）定理与动量矩（角动量）守恒定律</a></li>
+<li><a href="#_31">动能定理与机械能守恒定律</a></li>
+<li><a href="#_32">势能曲线</a></li>
+</ul>
+</li>
+<li><a href="#_33">有心力</a><ul>
+<li><a href="#_34">有心力的基本性质</a></li>
+<li><a href="#_35">轨道微分方程——比耐公式</a></li>
+<li><a href="#_36">平方反比引力——行星的运动</a></li>
+<li><a href="#_37">开普勒定律</a></li>
+<li><a href="#_38">宇宙速度和宇宙航行</a></li>
+<li><a href="#_39">圆形轨道的稳定性</a></li>
+<li><a href="#_40">平方反比斥力——阿尔法粒子的散射</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="_1">质点力学思维导图</h2>
+<p><img alt="质点力学的书目" src="http://oneqpwfpv.bkt.clouddn.com/%E8%B4%A8%E7%82%B9%E5%8A%9B%E5%AD%A6.svg" />
+* 参考链接：周衍柏. 理论力学教程[M]. 第三版. 北京: 高等教育出版社, 1979: 3-76.</p>
+<h2 id="_2">运动的描述方法</h2>
+<p>描述方法：以参考系和坐标系为基础，结合数学方程，给出一些常见物理量以定义和描述运动过程和运动状态。</p>
+<h3 id="_3">参考系和坐标系</h3>
+<ul>
+<li>参考系：分为<strong>惯性参考系</strong>和<strong>非惯性参考系</strong>。</li>
+<li>坐标系：主要将数学坐标系的概念代入物理背景中。</li>
+<li>二者关系：坐标系建立在参考系上，以数学方式构建物理模型。</li>
+</ul>
+<h3 id="_4">运动学方程和轨迹</h3>
+<ul>
+<li>运动学方程：表现质点的<strong>运动规律</strong>的，给出质点在空间或平面上任一时刻<code>t</code>所占据的位置的，一系列约束方程。</li>
+<li>轨道：运动质点在空间（或平面上）上一连串所占据的点形成的一条轨迹。</li>
+<li>直线运动：质点运动的轨道是一条直线的运动。</li>
+<li>曲线运动：质点运动的轨道是一条曲线的运动。</li>
+</ul>
+<h3 id="_5">位移、速度和加速度</h3>
+<ul>
+<li>位移：质点相对于某参考系运动时，位置连续变化。在给定时间内，连接质点的初位置A和末位置B的直线，并从A指向B加上箭头，叫做质点在此给定时间内相对于该参考系的<strong>位移</strong>,常用 $\Delta \vec{r}$ 表示。它既有方向，又有大小，符合平行四边形法则，是一个矢量。
+*</li>
+</ul>
+<h2 id="_6">速度、加速度的分量表示式</h2>
+<h3 id="_7">直角坐标系</h3>
+<h3 id="_8">极坐标系</h3>
+<h3 id="_9">切向加速度和法向加速度</h3>
+<h2 id="_10">平动参考系</h2>
+<h3 id="_11">绝对加速度、相对加速度和牵连加速度</h3>
+<h3 id="_12">绝对速度、相对速度和牵连速度</h3>
+<h2 id="_13">质点运动定律</h2>
+<h3 id="_14">牛顿运动定律</h3>
+<h3 id="_15">相对性原理</h3>
+<h2 id="_16">质点运动微分方程</h2>
+<h3 id="_17">运动微分方程的建立</h3>
+<h3 id="_18">运动微分方程的解</h3>
+<h2 id="_19">非惯性系动力学</h2>
+<h3 id="_20">在加速平动参考系中的运动</h3>
+<h3 id="_21">惯性力</h3>
+<h2 id="_22">功和能</h2>
+<h3 id="_23">功和功率</h3>
+<h3 id="_24">能</h3>
+<h3 id="_25">保守力、非保守力和耗散力</h3>
+<h3 id="_26">势能</h3>
+<h2 id="_27">质点动力学的基本定理与基本守恒定律</h2>
+<h3 id="_28">动量定理与动量守恒定律</h3>
+<h3 id="_29">力矩与动量矩</h3>
+<h3 id="_30">动量矩（角动量）定理与动量矩（角动量）守恒定律</h3>
+<h3 id="_31">动能定理与机械能守恒定律</h3>
+<h3 id="_32">势能曲线</h3>
+<h2 id="_33">有心力</h2>
+<h3 id="_34">有心力的基本性质</h3>
+<h3 id="_35">轨道微分方程——比耐公式</h3>
+<h3 id="_36">平方反比引力——行星的运动</h3>
+<h3 id="_37">开普勒定律</h3>
+<h3 id="_38">宇宙速度和宇宙航行</h3>
+<h3 id="_39">圆形轨道的稳定性</h3>
+<h3 id="_40">平方反比斥力——阿尔法粒子的散射</h3>
+    </div>
+    <div id="footer">
+      <div class="footer-left">
+        <p>
+          Copyright © 2017 <a href="https://www.yixuju.cn/" target="_blank">yi_Xu</a>.
+          Powered by <a href="http://simiki.org/" target="_blank">Simiki</a>.
+        </p>
+      </div>  <!--end footer-left -->
+      <div class="footer-right">
+        <p>
+          Site Generated 2017-05-07 17:31:11
+        </p>
+      </div> <!--end footer-right -->
+    </div>
+  </body>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'>
+  </script>
+</html>
