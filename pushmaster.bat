@@ -7,6 +7,8 @@ if errorlevel 1 goto :commit
 
 :commit
 git commit -m "%time%"
+ssh -T git@git.coding.net
+ssh -T git@github.com
 git push origin master
 
 :end

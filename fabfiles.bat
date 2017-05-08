@@ -13,6 +13,8 @@ if errorlevel 1 goto :gitcommit
 :gitcommit
 @echo on
 git commit -m "%date%"
+ssh -T git@github.com
+ssh -T git@git.coding.net
 git push origin coding-pages
 @echo off
 git checkout gh-pages
@@ -22,6 +24,8 @@ cd output
 git add .
 @echo on
 git commit -m "%date%"
+ssh -T git@git.coding.net
+ssh -T git@github.com
 git push origin gh-pages
 @echo off
 git checkout coding-pages
